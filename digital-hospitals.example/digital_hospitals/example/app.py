@@ -9,6 +9,7 @@ from fastapi import FastAPI, HTTPException, status
 from fastapi.openapi.docs import get_swagger_ui_html
 from fastapi.responses import PlainTextResponse
 
+# TODO: how to get consistent versioning across all subprojects?
 version = importlib.metadata.version('digital_hospitals.example')
 print(version)
 

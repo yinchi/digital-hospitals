@@ -19,6 +19,7 @@ from digital_hospitals.bim import models
 from digital_hospitals.common import (MONGODB_PASSWORD, MONGODB_PORT, MONGODB_TIMEOUT,
                                       MONGODB_URL, MONGODB_USER, check_docker)
 
+# TODO: how to get consistent versioning across all subprojects?
 version = importlib.metadata.version('digital_hospitals.bim')
 
 
@@ -213,7 +214,7 @@ Submit new BIM data.
 The new data is used to compute the runner times between each pair of marked doors in the BIM
 model.""",
           status_code=status.HTTP_202_ACCEPTED,
-        #   response_model=AcceptedResponseModel
+          #   response_model=AcceptedResponseModel
           )
 def update(file: UploadFile,
            background_tasks: BackgroundTasks,
@@ -239,10 +240,10 @@ request to update the BIM data. A request may have a status
 of "Running", "Error" or "OK; if the status is "OK" a graph object
 containing the runner time data is also returned.""")
 def query(id: Annotated[str,
-                            Query(
-                                title='Job ID',
-                                description='MongoDB object ID as a 24-hex-digit string.',
-                                example='665ed486d196679480be839a')],
+                        Query(
+                            title='Job ID',
+                            description='MongoDB object ID as a 24-hex-digit string.',
+                            example='665ed486d196679480be839a')],
           db: Annotated[Database, Depends(get_db)]):
     """Query request status"""
 

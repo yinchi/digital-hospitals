@@ -1,6 +1,4 @@
 {
-    "plantuml.server": "https://www.plantuml.com/plantuml",
-    "plantuml.render": "PlantUMLServer",
     "editor.wordWrapColumn": 100,
     "editor.rulers": [100],
     "autopep8.args": ["--max-line-length", "100"],
@@ -27,4 +25,29 @@
         ".venv"
     ],
     "python.terminal.activateEnvironment": false,
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.highlights.backgroundColourScheme": [
+        "red",
+        "orange",
+        "yellow",
+        "white",
+        "white",
+        "violet"
+    ],
+    "todo-tree.highlights.foregroundColourScheme": [
+        "white",
+        "black",
+        "black",
+        "black",
+        "black",
+        "black"
+    ],
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "[ ]",
+        "[x]"
+    ],
 }
