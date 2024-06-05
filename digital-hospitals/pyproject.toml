@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "digital-hospitals"
+version = "0.1.0"
+description = ""
+authors = ["Yin-Chi Chan <ycc39@cam.ac.uk>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "~3.12"
+digital-hospitals-bim = {path = "../digital-hospitals.bim", develop = true}
+digital-hospitals-common = {path = "../digital-hospitals.common", develop = true}
+digital-hospitals-example = {path = "../digital-hospitals.example", develop = true}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+pylint = "^3.2.2"
+ipykernel = "^6.29.4"
+matplotlib = "^3.9.0"
+scipy = "^1.13.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

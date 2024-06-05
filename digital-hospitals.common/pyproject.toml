@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "digital-hospitals-common"
+version = "0.1.0"
+description = ""
+authors = ["Yin-Chi Chan <ycc39@cam.ac.uk>"]
+readme = "README.md"
+packages = [{include = "digital_hospitals"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.7.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

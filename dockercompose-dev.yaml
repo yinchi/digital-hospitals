@@ -1,0 +1,70 @@
+# This file builds from local files.
+# For production, pull containers from a registry with the appropiate tag labels.
+
+services:
+  # THIRD PARTY SERVICES
+  mongo:
+    image: mongo:jammy
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD_FILE: /run/secrets/mongo-root-pw
+    secrets:
+      - mongo-root-pw
+    ports:
+      # Never expose this port!
+      - "27017:27017"
+  mongo-express:
+    image: mongo-express
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD_FILE: /run/secrets/mongo-root-pw
+
+      ME_CONFIG_MONGODB_ENABLE_ADMIN : true
+      ME_CONFIG_BASICAUTH_USERNAME: user
+      ME_CONFIG_BASICAUTH_PASSWORD_FILE: /run/secrets/mongo-pw
+    secrets:
+      - mongo-pw
+      - mongo-root-pw
+    ports:
+      # Never expose this port beyond localhost!
+      - "8081:8081"
+  nginx:
+    build:
+      context: .
+      dockerfile: dockerfiles/nginx.dockerfile
+    ports:
+      # ngrox http 80 --domain=<domain>.ngrok-free.app
+      - "80:80"
+
+  # DEVELOPER modules
+  dev-frontpage:
+    build:
+      context: .
+      dockerfile: dockerfiles/dev-frontpage.dockerfile
+    environment:
+      DH_GITHUB: yinchi/digital-hospitals
+
+  # FASTAPI modules
+  example:
+    build:
+      context: .
+      dockerfile: dockerfiles/example.dockerfile
+    environment:
+      IS_DOCKER: 1 # Switch for FastAPI reverse proxy
+    secrets:
+      - mongo-root-pw
+  bim:
+    build:
+      context: .
+      dockerfile: dockerfiles/bim.dockerfile
+    environment:
+      IS_DOCKER: 1 # Switch for FastAPI reverse proxy
+    secrets:
+      - mongo-root-pw
+secrets:
+  mongo-root-pw:
+    file: secrets/mongo-root-pw
+  mongo-pw:
+    file: secrets/mongo-pw

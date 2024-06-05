@@ -1,0 +1,6 @@
+# Apply override to all files and directories in the directory
+notebooks/** linguist-documentation
+
+*.ipynb filter=nbstripout
+*.zpln filter=nbstripout
+*.ipynb diff=ipynb

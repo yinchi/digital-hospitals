@@ -1,0 +1,30 @@
+{
+    "plantuml.server": "https://www.plantuml.com/plantuml",
+    "plantuml.render": "PlantUMLServer",
+    "editor.wordWrapColumn": 100,
+    "editor.rulers": [100],
+    "autopep8.args": ["--max-line-length", "100"],
+    "[markdown]": {
+        "editor.wordWrap": "bounded"
+    },
+    "[restructuredtext]": {
+        "editor.wordWrap": "bounded"
+    },
+    "[css]": {
+        "editor.wordWrap": "bounded"
+    },
+    "pylint.importStrategy": "fromEnvironment",
+    "pylint.interpreter": [
+        "${workspaceFolder}/.venv/bin/python"
+    ],
+    "pylint.path": [
+        "${workspaceFolder}/.venv/bin/pylint"
+    ],
+    "pylint.args": [
+        "--rcfile=${workspaceFolder}/.pylintrc"
+    ],
+    "pylint.ignorePatterns": [
+        ".venv"
+    ],
+    "python.terminal.activateEnvironment": false,
+}
