@@ -16,3 +16,29 @@ To minimize diffs relating to Jupyter notebooks, [`nbstripout`](https://pypi.org
 pipx install nbstripout
 nbstripout --install --attributes .gitattributes
 ```
+
+### Poetry setup
+```bash
+pipx install poetry
+
+# Install plugins (optional)
+poetry self add poetry-dotenv-plugin
+
+./poetry-refresh.sh
+```
+
+This will set up Poetry on your machine and create virtual environments for working on each subproject within this git repo. A master project is also provided within the `/digital-hospitals`
+subfolder.
+
+### Starting the services
+
+```bash
+source util.sh
+build_sphinx  # build documentation pages
+dcdev build
+dcdev up -d
+```
+
+## Todo Tree VSCode plugin
+
+A recommended Visual Studio Code plugin to install is [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree). The `.vscode/settings.json` file for this project contains some useful settings for this plugin.
