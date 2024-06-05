@@ -19,6 +19,14 @@ extensions = [
     'sphinx_rtd_dark_mode'
 ]
 
+myst_enable_extensions = [
+    "attrs_inline",
+    "colon_fence",
+    "smartquotes",
+    "strikethrough",
+    "tasklist",
+]
+
 templates_path = ['_templates']
 exclude_patterns = []
 

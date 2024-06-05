@@ -25,10 +25,11 @@ DES <-- Resource : Fetch staff/resource\nallocation schedules
 DES <-- Stock : Fetch stock levels\nfor consumables
 @enduml
 ```
+
 In the current implementation, the database is a [MongoDB](https://www.mongodb.com/) instance.
 Each module uses its own database, which contains one or more collections.
 A collection is a set of "documents" or JSON objects, each with an "_id" field set internally by MongoDB.
 
 ## FastAPI
 
-Each module will have a FastAPI interface. To view the generated Swagger documentation for each interface, click [here](http:/dev).
+Each module will have a FastAPI interface. To view the generated Swagger documentation for each interface, click [here](/dev){.external}.
