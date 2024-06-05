@@ -21,3 +21,10 @@ dcdev () {
     docker compose -f dockercompose-dev.yaml $@
     popd
 }
+
+# Refresh a running Docker Compose instance
+dev_refresh() {
+    build_sphinx
+    dcdev build
+    dcdev up -d
+}
