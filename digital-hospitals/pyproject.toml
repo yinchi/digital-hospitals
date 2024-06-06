@@ -10,6 +10,7 @@ package-mode = false
 python = "~3.12"
 digital-hospitals-bim = {path = "../digital-hospitals.bim", develop = true}
 digital-hospitals-common = {path = "../digital-hospitals.common", develop = true}
+digital-hospitals-dev-frontpage = {path = "../digital-hospitals.dev-frontpage", develop = true}
 digital-hospitals-example = {path = "../digital-hospitals.example", develop = true}
 
 
