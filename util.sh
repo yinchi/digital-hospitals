@@ -5,6 +5,9 @@ alias gitroot="cd \$(git rev-parse --show-toplevel)"
 # Only works from the project root directory, use `gitroot` first
 alias zipsecrets="zip -FSr secrets.zip secrets/"
 
+# Clean up docker
+alias dprune="docker system prune --volumes"
+
 # Build the Sphinx documentation for all subprojects using Sphinx
 build_sphinx () {
     pushd $(git rev-parse --show-toplevel)
