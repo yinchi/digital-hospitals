@@ -9,6 +9,7 @@ alias zipsecrets="zip -FSr secrets.zip secrets/"
 build_sphinx () {
     pushd $(git rev-parse --show-toplevel)
     cd digital-hospitals-docs
+    poetry run make clean  # IF not cleaned, new pages won't appear in TOC of existing pages
     poetry run make html
 
     # Add cd and make commands for each new subproject here

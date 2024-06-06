@@ -9,12 +9,22 @@ This Sphinx website describes a specification for a healthcare digital twin, usi
 - Anandarup Mukherjee
 - Rohit Krishnan
 
-Contents
---------
+Contents (under construction)
+-----------------------------
 
 - Modules
     - :doc:`Overview <modules_overview>`
-    - :doc:`BIM module <modules_bim>`
+    - :doc:`modules_asset`
+    - :doc:`modules_bim`
+    - :doc:`modules_stock`
+    - Resource scheduling module
+    - Simulation module
+- For developers
+    - Todo list
+    - Installing the project locally
+    - Deployment
+    - General documentation using Sphinx
+    - Automatic API documentation using FastAPI and Swagger
 
 .. toctree::
     :hidden:
@@ -27,7 +37,9 @@ Contents
     :caption: Modules
 
     modules_overview
+    modules_asset
     modules_bim
+    modules_stock
 
 .. toctree::
     :hidden:
