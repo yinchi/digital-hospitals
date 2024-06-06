@@ -38,8 +38,8 @@ The [MongoDB](https://www.mongodb.com/) instance contains the following four col
                 "placed_by": "str",
                 "supplier": "str",
                 "status": "Literal[\"Delivered\", \"Pending\", \"Cancelled\"]",
-                "expected": "float (timestamp)",
-                "delivered": "float (timestamp)"
+                "expected": "float (timestamp) | None",
+                "delivered": "float (timestamp) | None"
               },
               " ", " "
             ],

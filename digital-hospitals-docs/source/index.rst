@@ -17,7 +17,7 @@ Contents (under construction)
     - :doc:`modules_asset`
     - :doc:`modules_bim`
     - :doc:`modules_stock`
-    - Resource scheduling module
+    - :doc:`modules_resource`
     - Simulation module
 - For developers
     - Todo list
@@ -40,6 +40,7 @@ Contents (under construction)
     modules_asset
     modules_bim
     modules_stock
+    modules_resource
 
 .. toctree::
     :hidden:
