@@ -21,9 +21,9 @@ Contents (under construction)
     - Simulation module
 - For developers
     - Todo list
-    - Installing the project locally
+    - :doc:`dev_install`
     - Deployment
-    - General documentation using Sphinx
+    - :doc:`dev_sphinx`
     - Automatic API documentation using FastAPI and Swagger
 
 .. toctree::
@@ -46,4 +46,5 @@ Contents (under construction)
     :hidden:
     :caption: Development
 
-    test
+    dev_install
+    dev_sphinx
