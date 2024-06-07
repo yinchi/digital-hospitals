@@ -20,11 +20,11 @@ Contents (under construction)
     - :doc:`modules_resource`
     - Simulation module
 - For developers
-    - Todo list
+    - :doc:`todo`
     - :doc:`dev_install`
     - Deployment
     - :doc:`dev_sphinx`
-    - Automatic API documentation using FastAPI and Swagger
+    - :doc:`dev_fastapi`
 
 .. toctree::
     :hidden:
@@ -44,7 +44,14 @@ Contents (under construction)
 
 .. toctree::
     :hidden:
+    :caption: Todo list
+
+    todo
+
+.. toctree::
+    :hidden:
     :caption: Development
 
     dev_install
     dev_sphinx
+    dev_fastapi

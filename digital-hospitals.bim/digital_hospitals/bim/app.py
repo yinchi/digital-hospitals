@@ -214,7 +214,7 @@ Submit new BIM data.
 The new data is used to compute the runner times between each pair of marked doors in the BIM
 model.""",
           status_code=status.HTTP_202_ACCEPTED,
-          #   response_model=AcceptedResponseModel
+          response_model=AcceptedResponseModel
           )
 def update(file: UploadFile,
            background_tasks: BackgroundTasks,
@@ -244,7 +244,7 @@ def query(id: Annotated[str,
                             title='Job ID',
                             description='MongoDB object ID as a 24-hex-digit string.',
                             example='665ed486d196679480be839a')],
-          db: Annotated[Database, Depends(get_db)]):
+          db: Annotated[Database, Depends(get_db)]) -> BimResult:
     """Query request status"""
 
     _id = ObjectId(id)
