@@ -18,7 +18,7 @@ Contents (under construction)
     - :doc:`modules_bim`
     - :doc:`modules_stock`
     - :doc:`modules_resource`
-    - Simulation module
+    - :doc:`modules_sim`
 - For developers
     - :doc:`todo`
     - :doc:`dev_install`
@@ -41,6 +41,7 @@ Contents (under construction)
     modules_bim
     modules_stock
     modules_resource
+    modules_sim
 
 .. toctree::
     :hidden:

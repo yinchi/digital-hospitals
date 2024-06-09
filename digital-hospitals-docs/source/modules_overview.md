@@ -33,3 +33,5 @@ A collection is a set of "documents" or JSON objects, each with an "_id" field s
 ## FastAPI
 
 Each module will have a FastAPI interface. To view the generated Swagger documentation for each interface, click [here](/dev){.external}.
+
+Inputs to each interface shall be validated using [Pydantic](https://docs.pydantic.dev/latest/api/base_model/). Only the fields required to deliver the defined functionality should be included in the validation &mdash; Pydantic ignores additional fields by default. This allows for the API to be extended in the future without breaking previous versions; however, fields should *never* be removed.
